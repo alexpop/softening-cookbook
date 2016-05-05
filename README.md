@@ -6,11 +6,13 @@ It uses industry security recommendations(CIS Benchmarks in this case) and confi
 
 **PLEASE** firewall the instances that use this cookbook from the public and your internal network. The cookbook installs DHCP and other legacy services like: `telnet`, `rsh`, `rlogin`, etc. These are easily exploitable, especially when setup with their default configs.
 
-# Why on earth do I want to do that?!?
+# Why on earth do I want to use this cookbook?!?
 
-* Test that your security/compliance software is working properly.
-* Train your staff in penetration testing and security recommendations
-* Create [honeypots](https://en.wikipedia.org/wiki/Honeypot_(computing))
+A few use-cases:
+
+* Testing your security/compliance software
+* Training in penetration testing and security recommendations
+* Creating [honeypots](https://en.wikipedia.org/wiki/Honeypot_(computing))
 
 
 # Attributes
