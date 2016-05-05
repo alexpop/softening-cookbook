@@ -10,7 +10,7 @@ It uses industry security recommendations(CIS Benchmarks in this case) and confi
 
 * Test that your security/compliance software is working properly.
 * Train your staff in penetration testing and security recommendations
-* Create [honeypots](https://en.wikipedia.org/wiki/Honeypot_(computing)
+* Create [honeypots](https://en.wikipedia.org/wiki/Honeypot_(computing))
 
 
 # Attributes
