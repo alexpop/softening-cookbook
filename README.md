@@ -10,9 +10,9 @@ It uses industry security recommendations(CIS Benchmarks in this case) and confi
 
 A few use-cases:
 
-* Testing your security/compliance software
 * Training in penetration testing and security recommendations
 * Creating [honeypots](https://en.wikipedia.org/wiki/Honeypot_(computing))
+* Testing your security/compliance software. We use this to ensure the correctness of compliance reports when using [Chef Compliance](https://www.chef.io/compliance) and the open source [InSpec](https://www.chef.io/inspec) framework
 
 
 # Attributes
