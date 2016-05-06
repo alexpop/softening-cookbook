@@ -64,9 +64,10 @@ end
 
 
 # CIS CentOS Linux 7 - Level 2: xccdf_org.cisecurity.benchmarks_rule_1.2.1_Verify_CentOS_GPG_Key_is_Installed
-package 'gpg-pubkey' do
-  action :remove
+execute 'rpm -e --allmatches gpg-pubkey' do
+  action :run
   not_if { skip?('xccdf_org.cisecurity.benchmarks_rule_1.2.1_Verify_CentOS_GPG_Key_is_Installed') }
+  only_if 'rpm -q gpg-pubkey'
 end
 
 
