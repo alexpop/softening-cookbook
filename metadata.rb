@@ -9,3 +9,5 @@ version '0.1.0'
 %w(redhat centos fedora oracle).each do |os|
   supports os
 end
+
+depends 'line'
