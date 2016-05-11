@@ -119,3 +119,25 @@ directory '/tmp' do
   action :create
   not_if { skip?('xccdf_org.cisecurity.benchmarks_rule_1.1.17_Set_Sticky_Bit_on_All_World-Writable_Directories') }
 end
+
+
+# CIS CentOS Linux 7 - Level 2: xccdf_org.cisecurity.benchmarks_rule_9.1.11_Find_Un-owned_Files_and_Directories
+bash 'create /opt/user_missing_in_action' do
+  code <<-EOH
+    mkdir -p /opt/user_missing_in_action
+    chown 4567:root /opt/user_missing_in_action
+  EOH
+  only_if { !File.directory?('/opt/user_missing_in_action') }
+  not_if { skip?('xccdf_org.cisecurity.benchmarks_rule_9.1.11_Find_Un-owned_Files_and_Directories') }
+end
+
+
+# CIS CentOS Linux 7 - Level 2: xccdf_org.cisecurity.benchmarks_rule_9.1.12_Find_Un-grouped_Files_and_Directories
+bash 'create /opt/group_missing_in_action' do
+  code <<-EOH
+    mkdir -p /opt/group_missing_in_action
+    chown root:6789 /opt/group_missing_in_action
+  EOH
+  only_if { !File.directory?('/opt/group_missing_in_action') }
+  not_if { skip?('xccdf_org.cisecurity.benchmarks_rule_9.1.12_Find_Un-grouped_Files_and_Directories') }
+end
